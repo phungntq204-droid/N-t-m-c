@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-paper: #F4EBDD;
+    --bg-cream: #FFFCF6;
+    --ink-primary: #29251F;
+    --ink-secondary: #76644E;
+    --seal-red: #9F392F;
+    --seal-red-hover: #852D24;
+    --border-sand: #D9CBB7;
+  }
+
+  html {
+    background-color: var(--bg-paper);
+    color: var(--ink-primary);
+    font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: var(--bg-paper);
+    color: var(--ink-primary);
+    min-height: 100vh;
+    line-height: 1.65;
+  }
+
+  h1, h2, h3, .font-serif-display {
+    font-family: "Playfair Display", Georgia, serif;
+    text-wrap: balance;
+  }
+}
+
+/* Subtle artisanal paper texture overlay without heavy visual noise */
+.paper-surface {
+  background-color: #F4EBDD;
+  background-image: radial-gradient(rgba(118, 100, 78, 0.045) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.cream-card {
+  background-color: #FFFCF6;
+  border: 1px solid #D9CBB7;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Smooth settling curves for interactive elements */
+.ease-calligraphy {
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Traditional red seal stamp framing */
+.seal-stamp {
+  border: 1.5px solid #9F392F;
+  color: #9F392F;
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
